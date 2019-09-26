@@ -88,4 +88,4 @@ method_time(list_solver, new_words[0:100000], tree)
 # method_time(trie_solver, "trie_solver", words_list, tree)
 # method_time(list_solver, "list_solver", words_list, tree)
 
-print(memo)
+# print(memo)

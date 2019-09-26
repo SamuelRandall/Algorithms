@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be712fcb-5e13-474b-a37b-f3ae7a2db5cc" name="Default" comment="">
+    <list default="true" id="be712fcb-5e13-474b-a37b-f3ae7a2db5cc" name="Default" comment="updated trie class with minor improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generic_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/generic_search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maze.py" beforeDir="false" afterPath="$PROJECT_DIR$/maze.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/trie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,7 +60,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.coins">
+  <component name="RunManager" selected="Python.maze">
     <configuration name="coins" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Algoritms" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,28 +74,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/coins.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dna_search" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Algoritms" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dna_search.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,20 +147,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="trie" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Algoritms" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trie.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.dna_search" />
       <item itemvalue="Python.generic_search" />
       <item itemvalue="Python.maze" />
       <item itemvalue="Python.scratch" />
       <item itemvalue="Python.coins" />
+      <item itemvalue="Python.trie" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.coins" />
-        <item itemvalue="Python.scratch" />
         <item itemvalue="Python.maze" />
         <item itemvalue="Python.generic_search" />
-        <item itemvalue="Python.dna_search" />
+        <item itemvalue="Python.trie" />
+        <item itemvalue="Python.coins" />
+        <item itemvalue="Python.scratch" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +196,14 @@
       <option name="presentableId" value="Default" />
       <updated>1568605914511</updated>
     </task>
+    <task id="LOCAL-00001" summary="updated trie class with minor improvements">
+      <created>1569512282267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569512282267</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,5 +226,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="updated trie class with minor improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated trie class with minor improvements" />
   </component>
 </project>
