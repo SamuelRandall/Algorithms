@@ -17,28 +17,25 @@ class TrieNode:
 
 
 class Trie:
-
     def __init__(self):
-        self.root = self.getNode()
+        self.root: TrieNode = TrieNode()
 
-    def getNode(self):
-        return TrieNode()
-
-    def insert(self, word):
-        pCrawl = self.root
+    def insert(self, word: str):
+        position = self.root
         for letter in word:
-            if letter not in pCrawl.children:
-                pCrawl.children[letter] = self.getNode()
-            pCrawl = pCrawl.children[letter]
-        pCrawl.isEndOfWord = True
+            if letter not in position.children:
+                position.children[letter] = TrieNode()
+            position = position.children[letter]
+        position.isEndOfWord: bool = True
 
-    def search(self, word):
-        pCrawl = self.root
+    def search(self, word: str):
+        position = self.root
         for letter in word:
-            if letter not in pCrawl.children:
+            if letter not in position.children:
                 return False
-            pCrawl = pCrawl.children[letter]
-        return pCrawl is not None and pCrawl.isEndOfWord
+            position = position.children[letter]
+        return position is not None and position.isEndOfWord
+
 
 
 tree = Trie()
