@@ -72,9 +72,10 @@ public class RoadsAndLibraries {
 
     // Alternative solution using a tree instead of hashmap
     static long solution2(int n, int c_lib, int c_road, int[][] cities) {
-        long num_libs = n;
 
-        long min_cost = (num_libs * c_lib);
+        if(c_lib < c_road){
+            return (n * c_lib);
+        }
 
         int[] all_cities = new int[n];
         for (int i = 0; i < all_cities.length; i++) {
@@ -101,17 +102,12 @@ public class RoadsAndLibraries {
             long count = Libraries.getOrDefault(all_cities[i], 0L) + 1;
             num_roads += count - old_count;
             Libraries.put(all_cities[i], count);
-
         }
 
         num_roads = num_roads - (Libraries.size());
         long candidate_cost = (Libraries.size() * c_lib) + (num_roads * c_road);
 
-        if (candidate_cost < min_cost){
-            min_cost = candidate_cost;
-        }
-
-        return min_cost;
+        return candidate_cost;
     }
 
 //    private static final Scanner scanner = new Scanner(new BufferedReader(new FileReader("./INPUT.txt")));

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6ef6b02-15be-4462-a952-4e6442e21bc0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/INPUT.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Tree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/TreeNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java" afterPath="$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +19,8 @@
       <file leaf-file-name="RoadsAndLibraries.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="-731">
+              <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,8 +102,8 @@
         <option value="$PROJECT_DIR$/src/com/company/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/com/company/Tree.java" />
         <option value="$PROJECT_DIR$/OUTPUT.txt" />
-        <option value="$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java" />
         <option value="$PROJECT_DIR$/INPUT.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java" />
       </list>
     </option>
   </component>
@@ -691,12 +686,12 @@
       <option name="presentableId" value="Default" />
       <updated>1572394083478</updated>
       <workItem from="1572394086303" duration="2474000" />
-      <workItem from="1572633722952" duration="10767000" />
+      <workItem from="1572633722952" duration="11375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13241000" />
+    <option name="totallyTimeSpent" value="13849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/RoadsAndLibraries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="-731">
+          <caret line="73" column="73" lean-forward="false" selection-start-line="73" selection-start-column="73" selection-end-line="73" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
