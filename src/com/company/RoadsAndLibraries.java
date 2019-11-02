@@ -61,6 +61,7 @@ public class RoadsAndLibraries {
         }
         return min_cost;
     }
+    // Start of final solution
 
     public static int getParent(final int[] cities, int city){
 
@@ -73,8 +74,11 @@ public class RoadsAndLibraries {
     // Alternative solution using a tree instead of hashmap
     static long solution2(int n, int c_lib, int c_road, int[][] cities) {
 
-        if(c_lib < c_road){
-            return (n * c_lib);
+        long c_lib_long = c_lib;
+        long c_road_long = c_road;
+
+        if(c_lib <= c_road){
+            return (n * c_lib_long);
         }
 
         int[] all_cities = new int[n];
@@ -105,7 +109,7 @@ public class RoadsAndLibraries {
         }
 
         num_roads = num_roads - (Libraries.size());
-        long candidate_cost = (Libraries.size() * c_lib) + (num_roads * c_road);
+        long candidate_cost = (Libraries.size() * c_lib_long) + (num_roads * c_road_long);
 
         return candidate_cost;
     }
