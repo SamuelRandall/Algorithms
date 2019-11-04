@@ -1,7 +1,12 @@
 package com.company;
 
 import java.io.*;
-import java.util.*;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class RoadsAndLibraries {
 
@@ -61,15 +66,6 @@ public class RoadsAndLibraries {
         }
         return min_cost;
     }
-    // Start of final solution
-
-    public static int getParent(final int[] cities, int city){
-
-        while(cities[city] != city){
-            city = cities[city];
-        }
-        return city;
-    }
 
     // Alternative solution using a tree instead of hashmap
     static long solution2(int n, int c_lib, int c_road, int[][] cities) {
@@ -89,8 +85,8 @@ public class RoadsAndLibraries {
         for(int i = 0; i < cities.length; i++){
             int city1 = cities[i][0]-1;
             int city2 = cities[i][1]-1;
-            int parent1 = getParent(all_cities, city1);
-            int parent2 = getParent(all_cities, city2);
+            int parent1 = find(all_cities, city1);
+            int parent2 = find(all_cities, city2);
 
             if(parent1 != parent2){
                 all_cities[city1] = parent2;
@@ -101,7 +97,7 @@ public class RoadsAndLibraries {
         Map<Integer, Long> Libraries = new HashMap<>();
         long num_roads = 0;
         for(int i = 0; i < all_cities.length; i++){
-            all_cities[i] = getParent(all_cities, i);
+            all_cities[i] = find(all_cities, i);
             long old_count = Libraries.getOrDefault(all_cities[i], 0L);
             long count = Libraries.getOrDefault(all_cities[i], 0L) + 1;
             num_roads += count - old_count;
@@ -113,6 +109,99 @@ public class RoadsAndLibraries {
 
         return candidate_cost;
     }
+
+    // Final solution to problem
+    static long solution3(int n, int c_lib, int c_road, int[][] cities) {
+
+        int[] roots = new int[n + 1];
+
+        for (int i = 0; i < n + 1; i++) {
+            roots[i] = i;
+        }
+
+        long roads = 0;
+        long libraries = n;
+
+        if(c_lib < c_road){
+            return (c_lib * libraries);
+        }
+
+        for(int road = 0; road < cities.length; road++){
+            int city1 = cities[road][0];
+            int city2 = cities[road][1];
+
+            if(connected(city1, city2, roots)) continue;
+            roads++;
+            libraries--;
+            union(city1, city2, roots);
+        }
+        return (roads * c_road + libraries * c_lib);
+
+    }
+
+
+    static private void union(int p, int q, int[] cities) {
+        int rootP = find(cities, p);
+        int rootQ = find(cities, q);
+        if (rootP == rootQ) return;
+        cities[rootP] = rootQ;
+    }
+
+    static private boolean connected(int p, int q, int[] cities) {
+        return find(cities, p) == find(cities, q);
+    }
+
+    static private int find(final int[] cities, int city) {
+
+        while(cities[city] != city){
+            city = cities[city];
+        }
+        return city;
+    }
+
+    // Brady's solution verbatim
+
+//    static long roadsAndLibraries(int n, int c_lib, int c_road, int[][] cities) {
+//
+//        int[] roots = new int[n + 1];
+//        for (int i = 0; i < n + 1; i++) {
+//            roots[i] = i;
+//        }
+//
+//        long roads = 0;
+//        long libraries = n;
+//
+//        if (c_road > c_lib) {
+//            return libraries * c_lib;
+//        }
+//        for (int road = 0; road < cities.length; road++) {
+//            int a = cities[road][0];
+//            int b = cities[road][1];
+//            if (connected(a, b, roots)) continue;
+//            roads++;
+//            libraries--;
+//            union(a, b, roots);
+//        }
+//        return roads * c_road + libraries * c_lib;
+//    }
+//    static private void union(int p, int q, int[] cities) {
+//        int rootP = find(p, cities);
+//        int rootQ = find(q, cities);
+//        if (rootP == rootQ) return;
+//        cities[rootP] = rootQ;
+//    }
+//
+//    static private boolean connected(int p, int q, int[] cities) {
+//        return find(p, cities) == find(q, cities);
+//    }
+//
+//    static private int find(int p, int[] cities) {
+//        while(cities[p] != p) {
+//            p = cities[p];
+//        }
+//        return p;
+//    }
+
 
 //    private static final Scanner scanner = new Scanner(new BufferedReader(new FileReader("./INPUT.txt")));
 
@@ -145,8 +234,11 @@ public class RoadsAndLibraries {
                     cities[i][j] = citiesItem;
                 }
             }
-
-            long result = solution2(n, c_lib, c_road, cities);
+            Instant start = Instant.now();
+            long result = solution3(n, c_lib, c_road, cities);
+            Instant finish = Instant.now();
+            long timeElapsed = Duration.between(start, finish).toMillis();
+            System.out.println(timeElapsed + " ms");
 
             bufferedWriter.write(String.valueOf(result));
             bufferedWriter.newLine();
