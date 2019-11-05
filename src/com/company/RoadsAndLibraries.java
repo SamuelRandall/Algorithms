@@ -18,6 +18,7 @@ public class RoadsAndLibraries {
                 .findFirst().get();
     }
 
+    // Initial solution using a hashmap to store library keys and city values
     static long solution(int n, int c_lib, int c_road, int[][] cities) {
 
         int[] all_cities = new int[n+1];
@@ -147,9 +148,7 @@ public class RoadsAndLibraries {
         cities[rootP] = rootQ;
     }
 
-    static private boolean connected(int p, int q, int[] cities) {
-        return find(cities, p) == find(cities, q);
-    }
+    static private boolean connected(int p, int q, int[] cities) { return find(cities, p) == find(cities, q); }
 
     static private int find(final int[] cities, int city) {
 
